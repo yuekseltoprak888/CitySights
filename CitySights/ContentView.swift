@@ -8,12 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var query: String = ""
+
+    private var buttonGo: some View {
+        Button {
+
+        } label: {
+            Text("Go")
+        }
+        .buttonStyle(.borderedProminent)
+
+    }
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack(alignment: .center) {
+                TextField("Search", text: $query)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+                buttonGo
+                    .onAppear {
+                        print(Bundle.main.infoDictionary!["API_KEY"] as? String)
+                    }
+
+            }
+
+
+
+
         }
         .padding()
     }
