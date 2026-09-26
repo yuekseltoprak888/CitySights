@@ -1,0 +1,14 @@
+---
+description: Boundaries for energy calculations, finance, and Swiss data
+alwaysApply: true
+---
+
+# Energy engine
+
+- Physical calculations belong in `domain/energy`. Financial calculations belong in `domain/finance`.
+- Finance receives energy results and tariff schedules as values. It does not call pvlib or a provider.
+- Return a `Result` with a unit, at least one assumption, and an engine version.
+- Keep prices, tariffs, subsidies, and engineering assumptions in data or assumption sets.
+- Add a Swiss dataset as an adapter behind the existing port. Register it in `composition.py`.
+- Mock adapters stay free of surveyed yields, tariff rates, and subsidy amounts.
+- Store future geometry as SRID 2056. Accept WGS84 at the API edge.

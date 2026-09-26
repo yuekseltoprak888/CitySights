@@ -1,11 +1,9 @@
 ---
-description: EnergyOS architecture and where new code belongs
+description: Where EnergyOS code belongs
 alwaysApply: true
 ---
 
 # Architecture
-
-EnergyOS is a Swiss B2B assessment foundation. The product workflow is not in scope unless the task names a specific step.
 
 - Routes in `apps/api/src/energyos/api` validate input, call one service, and map the response.
 - Use cases live in `services`. Values and ports live in `domain`.
@@ -13,5 +11,3 @@ EnergyOS is a Swiss B2B assessment foundation. The product workflow is not in sc
 - `composition.py` wires adapters. Services depend on ports.
 - The web app calls EnergyOS only. Screens belong in `apps/web/src/features/<step>`.
 - Read `docs/architecture.md` before adding a package, table, or provider.
-
-Do not add heat pumps, EV charging, trading, IoT, machine learning, portfolio optimization, or countries other than Switzerland.

@@ -8,6 +8,7 @@ RUN apt-get update \
 
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
+    UV_NO_DEV=1 \
     PYTHONUNBUFFERED=1
 
 COPY pyproject.toml uv.lock ./

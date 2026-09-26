@@ -15,7 +15,7 @@ export default async function HomePage() {
           <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">
             Assessment platform
           </p>
-          <h1 className="font-serif text-6xl leading-none">EnergyOS</h1>
+          <h1 className="font-serif text-4xl leading-none sm:text-6xl">EnergyOS</h1>
           <p className="max-w-xl text-lg text-muted-foreground">
             B2B energy assessment for commercial and residential properties in Switzerland.
           </p>

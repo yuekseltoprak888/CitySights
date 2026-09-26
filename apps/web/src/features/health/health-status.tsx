@@ -3,7 +3,7 @@ import type { HealthView } from "@/lib/api/health";
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div className="grid grid-cols-[8rem_1fr] gap-4 border-t border-border py-3 first:border-t-0">
+    <div className="grid grid-cols-1 gap-1 border-t border-border py-3 first:border-t-0 sm:grid-cols-[8rem_1fr] sm:gap-4">
       <dt className="text-muted-foreground">{label}</dt>
       <dd>{value}</dd>
     </div>

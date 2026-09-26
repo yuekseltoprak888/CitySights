@@ -66,7 +66,7 @@ A route validates input, resolves the organization, calls one service, and maps 
 - Store later geometry as SRID 2056. Accept WGS84 at the API edge.
 - The web app calls EnergyOS only.
 
-Read `docs/architecture.md`, `docs/api-conventions.md`, `docs/swiss-providers.md`, and `docs/calculations.md` before changing those areas.
+Cursor rules in `.cursor/rules` cover product scope, architecture, the backend, the frontend, the energy-engine boundary, and testing. Read `docs/architecture.md`, `docs/api-conventions.md`, `docs/swiss-providers.md`, and `docs/calculations.md` before changing those areas.
 
 ## Done
 

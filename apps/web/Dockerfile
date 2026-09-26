@@ -8,6 +8,8 @@ COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 
 COPY . .
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
 EXPOSE 3000
-CMD ["pnpm", "dev"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
