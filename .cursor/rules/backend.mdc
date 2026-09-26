@@ -1,0 +1,16 @@
+---
+description: Python, FastAPI, and persistence conventions
+globs: apps/api/**/*.py
+alwaysApply: false
+---
+
+# Backend
+
+- Python 3.12, Pydantic v2, SQLAlchemy 2, Alembic, Ruff, mypy strict, and pytest.
+- Add schema changes as Alembic revisions. Keep ORM models aligned with those revisions.
+- Raise `EnergyOSError` values for expected failures. The API error handler maps them.
+- Organization and assessment identifiers are UUIDs.
+- List endpoints use the cursor helpers in `domain/pagination.py`.
+- Unit tests do not open a database. Integration tests use PostGIS and truncate tenancy tables.
+- Provider settings accept `mock` until a real adapter is registered.
+- Logs include the request id. They omit bodies, addresses, and provider payloads.

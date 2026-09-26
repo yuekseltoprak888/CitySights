@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-public-sans), "Segoe UI", sans-serif;
+  --font-serif: var(--font-newsreader), "Iowan Old Style", serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: #f4f1ea;
+  --foreground: #1c2420;
+  --card: #fbfaf6;
+  --card-foreground: #1c2420;
+  --primary: #1f4d3a;
+  --primary-foreground: #f7f6f1;
+  --muted: #e7e2d6;
+  --muted-foreground: #5c675f;
+  --border: #d9d3c5;
+  --ring: #1f4d3a;
+  --radius: 0.75rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}

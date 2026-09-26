@@ -1,0 +1,14 @@
+---
+description: Next.js, TypeScript, and shadcn conventions
+globs: apps/web/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Frontend
+
+- Next.js App Router, TypeScript strict mode, Tailwind CSS, and shadcn/ui components in `src/components/ui`.
+- Server state stays on the server. Call EnergyOS through `src/lib/api`.
+- Format displayed quantities with `src/lib/units.ts` and the `de-CH` locale.
+- Keep workflow UI inside `src/features/<step>`.
+- Do not call geo.admin, Sonnendach, ElCom, or other third-party energy APIs from the browser.
+- Health and API errors keep the server's `code`, `message`, and `request_id`.
