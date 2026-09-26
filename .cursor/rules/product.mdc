@@ -1,0 +1,12 @@
+---
+description: EnergyOS product scope
+alwaysApply: true
+---
+
+# Product
+
+EnergyOS is a Swiss B2B assessment platform for commercial and residential properties.
+
+The workflow is address, building, roof, consumption, PV, battery, tariff, finance, dashboard, and PDF. Implement a step only when the task names it.
+
+Do not add heat pumps, EV charging, energy trading, IoT, machine learning, portfolio optimization, or countries other than Switzerland.

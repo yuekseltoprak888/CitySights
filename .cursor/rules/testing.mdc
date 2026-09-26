@@ -1,0 +1,15 @@
+---
+description: How to test EnergyOS changes
+globs: "{apps/api/tests/**/*.py,apps/web/src/**/*.test.ts,apps/web/src/**/*.test.tsx}"
+alwaysApply: false
+---
+
+# Testing
+
+- Run `uv run pytest`, `uv run ruff check .`, and `uv run mypy` from `apps/api`.
+- Run `pnpm test`, `pnpm lint`, and `pnpm typecheck` from `apps/web`.
+- Unit tests cover services with in-memory ports. They do not call the network.
+- Integration tests require PostGIS. They check organization scoping and migrations.
+- A second organization must not read the first organization's assessment.
+- Do not snapshot energy results. There is no energy engine yet.
+- CI sets `REQUIRE_DATABASE=1`. A skipped database test is a failure there.
