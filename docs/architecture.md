@@ -33,6 +33,10 @@ An assessment belongs to one organization. Repository methods that read assessme
 
 `app_user` and `membership` exist so authentication can be added without reshaping the first tables. There is no login flow in this milestone.
 
+## Security
+
+The organization id in the URL is a data scope, not an authorization boundary. A caller who can reach the API can supply any organization id. Do not publicly deploy this application as a multi-tenant service until authentication and server-side tenant authorization exist.
+
 ## Quantities
 
 Numeric domain outputs use `Quantity`: a decimal value plus a unit. Calculation results use `Result`: a quantity, an assumption set, and an engine version. A result without assumptions is invalid.
